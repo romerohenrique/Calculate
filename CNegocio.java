@@ -9,6 +9,16 @@ public class CNegocio {
     Calculate calcN = new Calculate();
 
 
+    public void apresentar() {
+        System.out.println("Selecione uma opção");
+        System.out.println("Somar, digie: 1");
+        System.out.println("Subtrair, digite: 2");
+        System.out.println("Dividir, digite: 3");
+        System.out.println("Multiplcar, digite: 4");
+        System.out.println("___________________________");
+        System.out.println("digite a opção: ");
+    }
+
     public void somarDoisnumeros() {
         System.out.println("Soma");
         System.out.println("1º numero: ");

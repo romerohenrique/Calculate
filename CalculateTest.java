@@ -13,13 +13,7 @@ public class CalculateTest {
         Scanner scanner = new Scanner(System.in);
         CNegocio negocio = new CNegocio();
 
-        System.out.println("Selecione a opçao");
-        System.out.println("Somar, digie: 1");
-        System.out.println("Subtrair, digite: 2");
-        System.out.println("Dividir, digite: 3");
-        System.out.println("Multiplcar, digite: 4");
-        System.out.println("___________________________");
-        System.out.println("digite a opção: ");
+        negocio.apresentar();
         int opc = scanner.nextInt();
 
         if (opc == 1) {
@@ -30,6 +24,8 @@ public class CalculateTest {
             negocio.dividirDoisNumero();
         } else if (opc == 4) {
             negocio.multiplicarDoisNumeros();
+        } else {
+            System.out.println("Opção Inválida");
         }
     }
 }
