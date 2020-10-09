@@ -3,9 +3,15 @@ import java.util.Scanner;
 
 public class CalculateTest {
     public static void main(String[] args) {
+        /**
+         * Calculadora:
+         * Classe Calculate: Variáveis e metodos de calculos
+         * Classe CNegocio: faz interação entre o usuário e os métodos e atributos da Classe Calculate.
+         */
 
         Calculate calc = new Calculate();
         Scanner scanner = new Scanner(System.in);
+        CNegocio negocio = new CNegocio();
 
         System.out.println("Selecione a opçao");
         System.out.println("Somar, digie: 1");
@@ -17,35 +23,13 @@ public class CalculateTest {
         int opc = scanner.nextInt();
 
         if (opc == 1) {
-            System.out.println("Soma");
-            System.out.println("1º numero: ");
-            calc.num1 = scanner.nextInt();
-            System.out.println("2º numero: ");
-            calc.num2 = scanner.nextInt();
-            calc.somar(calc.num1, calc.num2);
+            negocio.somarDoisnumeros();
         } else if (opc == 2) {
-            System.out.println("Subtração");
-            System.out.println("1º numero: ");
-            calc.num1 = scanner.nextInt();
-            System.out.println("2º numero: ");
-            calc.num2 = scanner.nextInt();
-            calc.subtrair(calc.num1, calc.num2);
+            negocio.subtrairDoisNumeros();
         } else if (opc == 3) {
-            System.out.println("Divisão");
-            System.out.println("1º numero: ");
-            calc.num1 = scanner.nextInt();
-            System.out.println("2º numero: ");
-            calc.num2 = scanner.nextInt();
-            calc.dividir(calc.num1, calc.num2);
+            negocio.dividirDoisNumero();
         } else if (opc == 4) {
-            System.out.println("Multiplicação");
-            System.out.println("1º numero: ");
-            calc.num1 = scanner.nextInt();
-            System.out.println("2º numero: ");
-            calc.num2 = scanner.nextInt();
-            calc.multiplicar(calc.num1, calc.num2);
-        } else {
-            System.out.println("Opção inválida");
+            negocio.multiplicarDoisNumeros();
         }
     }
 }

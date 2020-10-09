@@ -1,4 +1,8 @@
 public class Calculate {
+    /**
+     * duas variáveis para receber os valores;
+     * quatro métodos para executar os calculos.
+     */
     double num1;
     double num2;
 
